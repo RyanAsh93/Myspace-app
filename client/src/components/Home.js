@@ -39,7 +39,7 @@ class Home extends React.Component {
       return (
         <div>
           <br />
-          <Header as='h1'>MySpace</Header>
+          <Header as='h1'color='blue' textAlign='center'>MySpace</Header>
           <br />
           <Card key={person.id}>
             <Image src={person.avatar} />
@@ -65,7 +65,7 @@ class Home extends React.Component {
         </div>
       )
     } else {
-      return <Header textAlign='center'>No More Friends</Header>
+      return <Header textAlign='center' color='red'>No More Friends!</Header>
     }
   }
 }
