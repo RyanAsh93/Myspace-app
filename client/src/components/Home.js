@@ -2,6 +2,7 @@ import React from 'react'
 import { Header, Image, Card, Button, Icon } from 'semantic-ui-react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import PostForm from './PostForm'
 
 class Home extends React.Component {
   state = { persons: [] }
@@ -54,6 +55,8 @@ class Home extends React.Component {
               </Button>
               <Button color='green' icon basic onClick={() => this.upVote(person.id)}>
                 <Icon name="thumbs up" />
+                </Button>
+                <Button basic color='blue' onClick>Comments
                 </Button>
             </Card.Content>
           </Card>

@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
 
 serialize :liked_persons, Array
 
+has_many :posts
+
 def self.random_person(ids)
  ids = ids.empty? ? [0] : ids
  Person.where("id NOT IN (?)", ids).order("RANDOM()")

@@ -6,9 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
+# make a seeds/FAKER for comments <-----
+
+
 25.times do
   name = Faker::Name.name   
-  avatar = Faker::Avatar.image(slug: name, size: '100x400', format: 'png', set: 'set2')
+  avatar = Faker::Avatar.image(slug: name, size: '100x300', format: 'png', set: 'set2')
   Person.create(name: name, avatar: avatar)
 end
 
